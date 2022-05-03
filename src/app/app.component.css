@@ -14,3 +14,13 @@ h3 {
   background-color: #def;
 }
 
+.mensaje_error {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+  color: white;
+  opacity: 0;
+}
+
+.habilitar {
+  opacity: 1;
+}

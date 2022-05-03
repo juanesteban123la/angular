@@ -29,11 +29,16 @@
 <br>
 <input type="text" [(ngModel)]="array_cursos[1].nombre" required #nombre_curso_input="ngModel">
 <p>Valido Nombre: {{nombre_curso_input.valid}}</p>
-<input type="number" [(ngModel)]="array_cursos[0].horas_duracion" required #horas_curso_input="ngModel">
-<p>Valido Horas: {{nombre_curso_input.valid}}</p>
+<input type="number" [(ngModel)]="array_cursos[0].horas_duracion" required #horas_curso_input="ngModel" max="10" min="1">
+<p>Valido Horas: {{horas_curso_input.valid}}</p>
 <hr>
 <h1>HTMLInputElement</h1>
 <h3>{{dato_input}}</h3>
 <input type="text" id="input" required>
 <button (click)="mostrar_dato_input()">Enviar</button>
+<hr>
 
+<h1>Clases</h1>
+<p class="mensaje_error" [class.habilitar]="nombre_curso_input.invalid">
+  Error campo requerido
+</p>
